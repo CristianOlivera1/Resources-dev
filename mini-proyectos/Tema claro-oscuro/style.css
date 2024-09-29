@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    transition: background 0.5s, color 0.5s;
+    
+}
+
+.dark-theme {
+    background: #000000;
+    color: white;
+}
+
+.light-theme {
+    background: #F0F0F0;
+    color: #333;
+}
+
+button {
+    all: unset;
+    width: 80px;
+    height: 24px;
+    background: linear-gradient(to right, #6d27c4, #ca4af9);
+    border-radius: 5rem;
+    box-shadow: 2px 3px 1px rgba(0, 0, 0, 0.429);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 17px;
+    height: 17px;
+    background: white;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.429);
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: transform 0.2s ease-in;
+}
+
+button.toggle::after {
+    transform: translateX(56px);
+}
